@@ -1,4 +1,4 @@
-DOCtype html
+<!DOCTYPE html>
 <html>
 <link href= 'https://diamondrolls.github.io/homepage/style.css' rel= 'stylesheet'>
   <title>Diamondrolls / Healthy Living, Positive Vibes, Prosperity</title>
@@ -8,15 +8,35 @@ DOCtype html
            <meta name="keywords" content= "diamondrolls, diamonds, money, marketing">
            <meta name="generator" content="Brackets">
            <meta name="google-site-verification" content="VrV3FJ_c0ff2OBwjVn2r0vdYJdcWEYke-XnUMS2Nh5c" />
-           
-         
+                                <script type='text/javascript'> 
+<style type="text/css">
+html{
+background-image:url('https://i.pinimg.com/564x/da/68/4f/da684fca300555fcf3bff6621152dbe5.jpg');
+}
+
+body{
+width:950px;
+height:1500px;
+position:absolute;
+}
+
+pressurewalker{
+width:50%;
+height:0px;
+overflow:scroll;
+}
+         </style>
 <head>
 </head>
-<body>
+<center><body>
 <center>
 <img src="https://i.pinimg.com/564x/da/68/4f/da684fca300555fcf3bff6621152dbe5.jpg" width="599px" height="1000px">
 </center>
+
+<center><div id="pressurewalker">
+</div></center>
 </body>
+</center>
 <footer>
 </footer>
 </html>
