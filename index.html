@@ -13,7 +13,40 @@
 html{
 background-image:url('https://i.pinimg.com/564x/da/68/4f/da684fca300555fcf3bff6621152dbe5.jpg');
 }
-
+revolver{
+  width:100%;
+  height:160px;
+  overflow:hidden;
+  z-index:75;
+}
+.containers{
+ position:absolute;
+  z-index:50;
+  width:100%;
+  height:150px;
+  animation:moneytime 6s linear 1s infinite;
+  -webkit-animation: moneytime 6s linear 1s infinite;/* Safari 4.0 - 8.0 */
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes moneytime{
+  from{
+    right:25%;
+    
+  }
+  to{
+    right:110%;
+   
+  }
+}
+@keyframes moneytime{
+  from{
+    right:25%;
+    
+  }
+  to{
+    right:110%;
+  }
+}
 body{
 width:950px;
 height:1500px;
@@ -28,6 +61,10 @@ overflow:scroll;
 }
          </style>
 <head>
+   <div class="revolver">
+          <div class ="containers">	<h7 class="neon" data-text="1300">1300</h7></div>     
+        
+       </div>
 </head>
 <center><body>
 <center>
