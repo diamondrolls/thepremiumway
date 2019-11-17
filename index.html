@@ -31,25 +31,28 @@ body{    border-radius:50px;
   height:150px;
   animation:moneytime 6s linear 1s infinite;
   -webkit-animation: moneytime 6s linear 1s infinite;/* Safari 4.0 - 8.0 */
+	 animation-direction:alternate;
+  -webkit-animation-direction:alternate;/* Safari 4.0 - 8.0 */
+
 }
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes moneytime{
   from{
-    right:52%;
+    right:0%;
     
   }
   to{
-    right:110%;
+    right:99%;
    
   }
 }
 @keyframes moneytime{
   from{
-    right:52%;
+    right:0%;
     
   }
   to{
-    right:110%;
+    right:99%;
   }
 }
 
