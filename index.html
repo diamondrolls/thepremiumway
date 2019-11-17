@@ -23,8 +23,21 @@ body{    border-radius:50px;
 	overflow:scroll;
 	
 }         
-
+.revolver{
+	position:absolute;	
+	z-index:49;
+	width:100%;
+	height:110px;
+	overflow:hidden;
+	transform:rotateY(45deg);
+	-webkit-transform:rotateY(45deg);
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+    }
+			       
 .containers{
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
  position:absolute;
   z-index:50;
   width:300px;
@@ -44,7 +57,7 @@ background-size:300px 150px;
   
   }
   to{
-    right:89%;
+    right:79%;
   
   }
 }
@@ -55,7 +68,7 @@ background-size:300px 150px;
   
   }
   to{
-    right:89%;
+    right:79%;
    
   }
 }
@@ -138,13 +151,7 @@ border-style:outset;
 	background-repeat:no-repeat;
 }
 	
-.revolver{
-	position:absolute;	
-	z-index:49;
-	width:100%;
-	height:110px;
-	overflow:hidden;	  
-    }
+
 			       
 .photo{
 	float:left;
