@@ -27,25 +27,38 @@ body{    border-radius:50px;
 	position:absolute;	
 	z-index:49;
 	width:100%;
-	height:110px;
+	height:170px;
 	overflow:hidden;
-	transform:rotateY(45deg);
-	-webkit-transform:rotateY(45deg);
+	transform:rotateY(45deg)rotate(-25deg);
+	-webkit-transform:rotateY(45deg)rotate(-25deg);
 	transform-style:preserve-3d;
 	-webkit-transform-style:preserve-3d;
     }
-			       
-.containers{
+			      
+.revolvers{
+	position:bsolute;	
+	z-index:51;
+	width:100%;
+	height:170px;
+	overflow:hidden;
+	transform:rotateY(135deg)rotate(-25deg);
+	-webkit-transform:rotateY(135deg)rotate(-25deg);
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+    }
+
+
+.container{
 	transform-style:preserve-3d;
 	-webkit-transform-style:preserve-3d;
  position:absolute;
   z-index:50;
   width:300px;
   height:150px;
-  animation:moneytime 8s linear;
-  -webkit-animation: moneytime 8s linear;/* Safari 4.0 - 8.0 */
-
-	background-image:url('https://i.pinimg.com/564x/3e/92/ce/3e92ced4c964771550b3fe03f233049a.jpg');
+  margin-left:120px;
+  animation:moneytime .7s linear;
+  -webkit-animation: moneytime .7s linear;/* Safari 4.0 - 8.0 */
+	background-image:url('https://i.pinimg.com/originals/b4/ea/64/b4ea64633f89e2660b5dcbbadb0e9f3b.png');
 background-size:300px 150px;
 	background-repeat:no-repeat;
 }
@@ -57,7 +70,7 @@ background-size:300px 150px;
   
   }
   to{
-    right:79%;
+    right:39%;
   
   }
 }
@@ -68,11 +81,123 @@ background-size:300px 150px;
   
   }
   to{
-    right:79%;
+    right:39%;
+   
+  }
+}
+.containers{
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+ position:absolute;
+  z-index:51;
+  width:300px;
+  height:150px;
+  margin-left:120px;
+  animation:moneytime .3s linear;
+  -webkit-animation: moneytime .3s linear;/* Safari 4.0 - 8.0 */
+	background-image:url('https://i.pinimg.com/originals/b4/ea/64/b4ea64633f89e2660b5dcbbadb0e9f3b.png');
+background-size:300px 150px;
+	background-repeat:no-repeat;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes moneytime{
+  from{
+    right:0%;
+    
+  
+  }
+  to{
+    right:39%;
+  
+  }
+}
+@keyframes moneytime{
+  from{
+    right:0%;
+     
+  
+  }
+  to{
+    right:39%;
    
   }
 }
 
+.revolver1{
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+ position:absolute;
+  z-index:70;
+  width:300px;
+  height:150px;
+ margin-left:40%;
+  animation:money 9s linear infinite ;
+  -webkit-animation: money 9s linear infinite ;/* Safari 4.0 - 8.0 */
+   animation-direction: alternate;
+  -webkit-animation-direction: alternate;/* Safari 4.0 - 8.0 */
+	background-image:url('https://i.pinimg.com/originals/58/7a/32/587a320971a161708c9fdcdd6d7cf3bd.png');
+background-size:300px 150px;
+	background-repeat:no-repeat;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes money{
+  from{
+    top:10%;
+   
+  
+  }
+  to{
+    top:79%;
+  
+  }
+}
+@keyframes money{
+  from{
+    top:10%;
+     
+  
+  }
+  to{
+    top:79%;
+   
+  }
+}	  
+
+.containers1{
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+ position:reletive;
+  z-index:69;
+  width:300px;
+  height:150px;
+  animation:time 2s linear infinite ;
+  -webkit-animation: time 2s linear infinite ;/* Safari 4.0 - 8.0 */
+  
+	
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes time{
+  from{
+    transform:rotateX(0deg);
+   
+  
+  }
+  to{
+   transform:rotateX(0deg);
+  
+  }
+}
+@keyframes time{
+  from{
+    transform:rotateX(0deg);
+     
+  
+  }
+  to{
+    transform:rotateX(360deg);
+   
+  }
+}	 
 .pressurewalker{
 width:100%;
 height:720px;
@@ -285,9 +410,15 @@ border-style:outset;
 <head>
   
                
-      <div class="revolver">
-	<div class= "containers"><h7 class="neon" data-text="1300">1300</h7></div>
- </div>  
+    <div class="revolver"><div class="container">
+  </div></div>
+<div class="revolvers"><div class="containers">
+  </div></div>
+
+<div class="revolver1">
+  <div class="containers1"><h7 class="neon" data-text="1300">1300</h7>
+  </div>
+  </div>
        
 </head>
 <body>
