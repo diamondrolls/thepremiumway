@@ -108,7 +108,25 @@ height:720px;
 	border-radius:200px;
 }
 
-   
+  		   .slide{
+  width: 430px;
+  height: 550px;
+  overflow:hidden;
+  padding:0;
+  margin: 30px auto;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  -o-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+.slide place{
+  display:block;
+  width:0;
+  float:left;
+  -webkit-transition: all 0.75s;
+  -moz-transition: all 0.75s;
+  transition: all 0.75s;
+} 
 			       
 .oc{
 		position:relative;
@@ -355,7 +373,26 @@ border-style:outset;
        
 </head>
 <body>
-	
+	<center>
+  <section class="slide">
+    <place>
+       <img src="https://i.pinimg.com/564x/ae/83/ba/ae83ba858cdd3b6552ae340983ee657a.jpg" width="830px"height="550px">
+    </place>
+    <place>
+       <img src="https://i.pinimg.com/564x/b3/f8/07/b3f8072b048f4d87b0b0e0967a7344be.jpg" width="830px"height="550px">
+    </place>
+    <place>
+       <img src="https://i.pinimg.com/564x/95/94/b3/9594b3492a255a52a3710666d6619d9c.jpg" width="830px"height="550px">
+    </place>
+    <place>
+       <img src="https://i.pinimg.com/564x/27/d2/7b/27d27b7f0a340a61b3d00df98a2510e9.jpg" width="830px"height="550px">
+    </place>
+    <place>
+       <img src="https://i.pinimg.com/originals/09/00/ee/0900ee030d96065449beaa7eade5ea0e.gif" width="830px"height="550px">
+    </place>
+</section>
+		
+</center> 
 
 <div class="pressurewalker">
  <a href="https://m.facebook.com/#!/thepremium.way" target="_blank"><https://i.pinimg.com/originals/b5/9d/15/b59d15f1d09ebd9882cad4a448688aac.png" width='50px' height='50px'>
@@ -473,7 +510,21 @@ picture-in-picture" allowfullscreen></iframe>
 	  for any concerns.</h1></div>
 
     </div>
-			
+	<script>
+ var x = 0;
+var y = 0;
+var myVar=setInterval(function(){slides()},3000);
+function slides() {
+  document.getElementsByTagName("place")[y].style.width="0px";
+  document.getElementsByTagName("place")[x].style.width="100%";
+  y = x;
+  ++x;
+  if (x == 5) {
+     x = 0;
+  }
+}
+ 
+         </script>		
 </body>
 
 <footer>
