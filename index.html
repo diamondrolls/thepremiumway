@@ -481,33 +481,13 @@ overflow:scroll;
 
 <div class="photo1">
  	 <h7 class="neon" data-text="If you want to be posted please submit payment and video">If you want to be posted please submit payment and video</h7>
- 	<div id="paypal-button-container"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AS5V8WsG0ZX5esmDk2ZW0lMTGPqStiCi9NH2jmmUg-gZ8uh_1G8EIRgBo1EUSzn0QORq3ZkxLobU_i0-&currency=USD" data-sdk-integration-source="button-factory"></script>
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'rect',
-          color: 'gold',
-          layout: 'horizontal',
-          label: 'paypal',
-          
-      },
-      createOrder: function(data, actions) {
-          return actions.order.create({
-              purchase_units: [{
-                  amount: {
-                      value: '1'
-                  }
-              }]
-          });
-      },
-      onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-              alert('Transaction completed by ' + details.payer.name.given_name + '!');
-          });
-      }
-  }).render('#paypal-button-container');
-</script>
+ 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="KGJH2DT9H8GKY">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
   </div>
 <br>
 	  
