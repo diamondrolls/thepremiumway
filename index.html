@@ -475,13 +475,9 @@ overflow:scroll;
 
 
 <div class="photo1">
- 	 <h7 class="neon" data-text="If you want to be posted please submit payment and video">If you want to be posted please submit payment and video</h7>
- 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="KGJH2DT9H8GKY">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
+ 	 <h7 class="neon" data-text="If you want to be posted please <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KGJH2DT9H8GKY"> submit video here</a>">If you want to be posted please submit payment video here</h7>
+ 	
+
 
   </div>
 <br>
@@ -588,6 +584,19 @@ function slides() {
 </body>
 
 <footer>
-		<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/660838115&color=%2300b2ff&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="6FDVDCTK6YNT4">
+<table>
+<tr><td><input type="hidden" name="on0" value="Offers">Offers</td></tr><tr><td><select name="os0">
+	<option value="Videos emailed to you">Videos emailed to you : $3.00 USD - monthly</option>
+	<option value="Special offers emailed to you">Special offers emailed to you : $3.00 USD - monthly</option>
+	<option value="Both">Both : $6.00 USD - monthly</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
 </footer>
 </html>
