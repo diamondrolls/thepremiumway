@@ -18,19 +18,21 @@ html {
 
 
 		   ul {
-	   top:15%;
-         float:left;
+       margin:0px;
+       padding:0px;
        list-style: none;
-        position:absolute;
-	z-index:30;
+        position:relative;
     }
-
+		   
 ul li {
-position:relative;
+Position:relative;
+     width:100px; 
+	height:100px;
     font-size:20px;
     font-family: ariel;
-    text-align:center;
+    Text-align:center;
     }
+
 
 
 ul li ul li {
@@ -39,11 +41,25 @@ position:relative;
 }
 ul li:hover ul li {
 z-index:999;
-width:99%;
-height:99%;
     display: block;
 Position:relative;
-}
+Background-color:rgba(0,255,255,.7);
+}  
+		   
+		   ul li b {
+    text-decoration: none;
+    color: red;
+    display: block;
+   width:400px;
+  height:150px;
+  overflow:scroll;
+	font-size:30px;
+		   }
+
+		   ul li b:hover {
+    float:none;
+    background-color:aqua; 
+    }
 
 body{    
 	
