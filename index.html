@@ -120,32 +120,20 @@ background-size: 250px 150px;
   height:150px;
   animation:time 2s linear infinite ;
   -webkit-animation: time 2s linear infinite ;/* Safari 4.0 - 8.0 */
-  right:5%;
 	
 }
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes time{
-  from{
-    transform:rotateX(0deg);
-   
+   0% { left:-1200px;}
+	100% { left:2500px;}
   
-  }
-  to{
-   transform:rotateX(360deg);
-  
-  }
 }
-@keyframes time{
-  from{
-    transform:rotateX(0deg);
-     
-  
+@keyframes  time{
+0% { left:-1200px;}
+	100% { left:2500px;}
+
   }
-  to{
-    transform:rotateX(360deg);
-   
-  }
-}	 
+	 
 .pressurewalker{
  position:relative;
 width:100%;
