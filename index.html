@@ -978,10 +978,16 @@ border-color:rgb(0,250,200);
       window.location.href = 'https://diamondrolls.github.io/play/' // redirect to login page
     }
   })
+
+		
+  supabase.auth.getSession().then(({ data }) => {
+    if (!data.session) {
+      window.location.href = 'https://diamondrolls.github.io/play/'
+    }
+  })
+		
 </script>
 
- 
-         </script>		
 </body>
 
 <footer>
