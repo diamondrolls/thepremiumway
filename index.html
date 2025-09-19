@@ -783,7 +783,8 @@ border-color:rgb(0,250,200);
 	 }
          </style>
 <head>
-  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+
 	<meta name= "view port"
 	content= "width=device-width,
 	initial-scale=1.0">
@@ -805,6 +806,8 @@ border-color:rgb(0,250,200);
  	 <h7 class="neon" data-text=" Crypto Chatt 👨🏿‍🚀"> Crypto Chatt 👨🏿‍🚀</h7>
  </div>
 	 </a>  
+	<button id="logout-btn">Logout</button>
+
 </li>
 </ul>
 </li></button>
@@ -962,18 +965,21 @@ border-color:rgb(0,250,200);
 
     </div>
 	<script>
- var x = 0;
-var y = 0;
-var myVar=setInterval(function(){slides()},3000);
-function slides() {
-  document.getElementsByTagName("place")[y].style.width="0px";
-  document.getElementsByTagName("place")[x].style.width="100%";
-  y = x;
-  ++x;
-  if (x == 5) {
-     x = 0;
-  }
-}
+   const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co'
+  const supabaseKey = 'YOUR_SUPABASE_ANON_KEY' // replace with your anon key
+  const supabase = Supabase.createClient(supabaseUrl, supabaseKey)
+
+  // Handle logout
+  document.getElementById('logout-btn').addEventListener('click', async () => {
+    const { error } = await supabase.auth.signOut()
+    if (error) {
+      alert(error.message)
+    } else {
+      window.location.href = 'https://diamondrolls.github.io/play/' // redirect to login page
+    }
+  })
+</script>
+
  
          </script>		
 </body>
