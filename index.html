@@ -788,7 +788,8 @@ border-color:rgb(0,250,200);
 	<meta name= "view port"
 	content= "width=device-width,
 	initial-scale=1.0">
-
+<img id="userAvatar" src="" alt="Profile" width="60" height="60" style="border-radius:50%;">
+<p id="userName"></p>
 		<button id="logout-btn">Logout</button>
 
 <ul>
@@ -990,6 +991,30 @@ border-color:rgb(0,250,200);
       window.location.href = 'https://diamondrolls.github.io/play/';
     }
   });
+
+	async function loadProfile() {
+  const { data: userData, error } = await supabase.auth.getUser();
+  if (error || !userData.user) {
+    console.log("Not logged in");
+    return;
+  }
+
+  const user = userData.user;
+  document.getElementById('userName').textContent = user.user_metadata?.name || "User";
+
+  // Get public URL for the user's avatar
+  const filePath = `${user.id}/avatar.png`;
+  const { data } = supabase.storage.from('avatars').getPublicUrl(filePath);
+  
+  if (data && data.publicUrl) {
+    document.getElementById('userAvatar').src = data.publicUrl;
+  } else {
+    document.getElementById('userAvatar').src = 'default-avatar.png'; // fallback
+  }
+}
+
+// Run this on page load
+loadProfile();
 </script>
 
 
