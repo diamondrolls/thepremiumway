@@ -969,6 +969,7 @@ border-color:rgb(0,250,200);
     </div>
 
 		
+<script src="https://unpkg.com/@supabase/supabase-js"></script>
 <script>
   const { createClient } = supabase;
   const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co';
@@ -992,30 +993,32 @@ border-color:rgb(0,250,200);
     }
   });
 
-	async function loadProfile() {
-  const { data: userData, error } = await supabase.auth.getUser();
-  if (error || !userData.user) {
-    console.log("Not logged in");
-    return;
+  // Load profile info (avatar + name)
+  async function loadProfile() {
+    const { data: userData, error } = await client.auth.getUser();
+    if (error || !userData.user) {
+      console.log("Not logged in");
+      return;
+    }
+
+    const user = userData.user;
+    document.getElementById('userName').textContent = user.user_metadata?.name || "User";
+
+    // Get public URL for the user's avatar
+    const filePath = `${user.id}/avatar.png`;
+    const { data } = client.storage.from('avatars').getPublicUrl(filePath);
+
+    if (data && data.publicUrl) {
+      document.getElementById('userAvatar').src = data.publicUrl;
+    } else {
+      document.getElementById('userAvatar').src = 'default-avatar.png'; // fallback
+    }
   }
 
-  const user = userData.user;
-  document.getElementById('userName').textContent = user.user_metadata?.name || "User";
-
-  // Get public URL for the user's avatar
-  const filePath = `${user.id}/avatar.png`;
-  const { data } = supabase.storage.from('avatars').getPublicUrl(filePath);
-  
-  if (data && data.publicUrl) {
-    document.getElementById('userAvatar').src = data.publicUrl;
-  } else {
-    document.getElementById('userAvatar').src = 'default-avatar.png'; // fallback
-  }
-}
-
-// Run this on page load
-loadProfile();
+  // Run this on page load
+  loadProfile();
 </script>
+
 
 
 		
