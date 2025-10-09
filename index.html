@@ -788,8 +788,16 @@ border-color:rgb(0,250,200);
 	<meta name= "view port"
 	content= "width=device-width,
 	initial-scale=1.0">
-<img id="userAvatar" src="" alt="Profile" width="60" height="60" style="border-radius:50%;">
-<p id="userName"></p>
+<div id="profileForm">
+  <img id="userAvatar" src="default-avatar.png" alt="Avatar" width="100" />
+  <input type="file" id="avatarUpload" accept="image/*" />
+  
+  <input type="text" id="displayName" placeholder="Enter profile name" />
+  <button id="saveProfileBtn">Save Profile</button>
+</div>
+
+<h3 id="userName">User</h3>
+<br> <br> <br>
 		<button id="logout-btn">Logout</button>
 
 <ul>
