@@ -788,12 +788,23 @@ border-color:rgb(0,250,200);
 	<meta name= "view port"
 	content= "width=device-width,
 	initial-scale=1.0">
+	
 <div id="profileForm">
-  <img id="userAvatar" src="default-avatar.png" alt="Avatar" width="100" />
-  <input type="file" id="avatarUpload" accept="image/*" />
-  
-  <input type="text" id="displayName" placeholder="Enter profile name" />
-  <button id="saveProfileBtn">Save Profile</button>
+    <ul>
+       <button>
+              <li>
+                 <img id="userAvatar" src="default-avatar.png" alt="Avatar" width="100" />
+                  <ul>
+                    <li>		
+					   <div class="photo1">
+		               <input type="file" id="avatarUpload" accept="image/*" />
+                       <input type="text" id="displayName" placeholder="Enter profile name" />
+                       <button id="saveProfileBtn">Save Profile</button>
+				    </li>
+                   </ul>
+                </li>
+		</button>
+    </ul>
 </div>
 
 <h3 id="userName">User</h3>
@@ -802,7 +813,8 @@ border-color:rgb(0,250,200);
 
 <ul>
 
-	<button><li>
+	<button>
+		<li>
 
 
  <div class="photo1">
@@ -821,8 +833,9 @@ border-color:rgb(0,250,200);
 
 </li>
 </ul>
-</li></button>
-		  
+</li>
+</button>
+</ul>	  
 
        
 </head>
