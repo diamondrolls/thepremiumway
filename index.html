@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<title>Crypto Music Label</title>
+          
+<meta name="author" content="Solomon Shamir Thompson">
+<meta name="description" content="🎵🎶🎶🎵">
+<meta name="keywords" content="music, 93 premium">
+<meta name="generator" content="Brackets">
+<meta name="google-site-verification" content="VrV3FJ_c0ff2OBwjVn2r0vdYJdcWEYke-XnUMS2Nh5c" />
+
+<style type="text/css">
+html {  
+    background-color:rgb(0, 0, 0);
+    height:100%;
+    width:100%;
+    overflow:hidden;
+}
+
+ul {
+    margin:0px;
+    padding:0px;
+    list-style: none;
+    position:relative;
+}
+		   
+ul li {
+    position:relative;
+    width:100px; 
+    height:100px;
+    font-size:20px;
+    font-family: ariel;
+    text-align:center;
+}
+
+ul li ul li {
+    display: none;
+    position:relative;
+}
+
+ul li:hover ul li {
+    z-index:999;
+    display: block;
+    position:relative;
+    background-color:rgba(0,255,255,.7);
+}  
+		   
+ul li b {
+    text-decoration: none;
+    color: red;
+    display: block;
+    width:400px;
+    height:150px;
+    overflow:scroll;
+    font-size:30px;
+}
+
+ul li b:hover {
+    float:none;
+    background-color:aqua; 
+}
+
+body{
+    background-color:rgb(0, 0, 0);
+    overflow:scroll;
+    width:98%;
+    height:98%;
+}      
+
+/* Profile section styles */
+.profile-container {
+    position: relative;
+    z-index: 1000;
+}
+
+#profileForm {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #00ffff;
+}
+
+#userAvatar {
+    border-radius: 50%;
+    border: 2px solid #00ffff;
+    cursor: pointer;
+}
+
+.profile-inputs {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#avatarUpload, #displayName {
+    padding: 5px;
+    border: 1px solid #00ffff;
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+
+#saveProfileBtn, #logout-btn {
+    padding: 5px 10px;
+    background: #00ffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#saveProfileBtn:hover, #logout-btn:hover {
+    background: #00cccc;
+}
+
+/* Rest of your existing CSS remains the same */
+.revolver1{
+    transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    position:relative;
+    z-index:70;
+    width:200px;
+    height:100px;
+    float:left;
+    background-image:url('https://i.pinimg.com/originals/e1/17/8a/e1178ab734726df9a37d3386fa8680a9.png');
+    background-size: 200px 100px;
+    background-repeat:no-repeat;
+}		  
+
+.containers1{
+    transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    position:relative;
+    z-index:69;
+    width:900px;
+    height:150px;
+    animation:time 6s linear infinite ;
+    -webkit-animation: time 6s linear infinite ;
+}
+
+/* ... rest of your existing CSS ... */
+
+</style>
+
+<head>
+<script src='https://unpkg.com/@supabase/supabase-js@2'></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <ul>
+            <div id="profileForm">	
+                <button style="background: none; border: none; cursor: pointer;">
+                    <li>
+                        <img id="userAvatar" src="https://via.placeholder.com/100" alt="Avatar" width="100" />
+                        <h3 id="userName">User</h3>
+                        <ul>
+                            <li>		
+                                <div class="photo1">
+                                    <div class="profile-inputs">
+                                        <input type="file" id="avatarUpload" accept="image/*" />
+                                        <input type="text" id="displayName" placeholder="Enter profile name" />
+                                        <button id="saveProfileBtn">Save Profile</button>
+                                        <button id="logout-btn">Logout</button>
+                                    </div>
+                                    <a href="https://diamondrolls.github.io/bitcoin/">
+                                        <div class="photo1options">	
+                                            <h3 class="neon" data-text=" Chatt 🧾"> Chatt 🧾</h3>
+                                        </div>
+                                    </a> 
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </button>
+            </div>
+        </ul>
+    </div>
+
+    <!-- Rest of your HTML content -->
+    <div class="fallingstar1"></div>
+    <div class="fallingstar2"></div>
+    <div class="fallingstar3"></div>
+    <div class="fallingstar4"></div>
+    <div class="fallingstar5"></div>
+    
+    <!-- ... rest of your HTML ... -->
+
+<script>
+// Initialize Supabase client
+const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTc2ODg0MDMsImV4cCI6MjAzMzI2NDQwM30.6Xj4z2S9aJqk0Qd6Q8Q9Q7Q8Q9Q7Q8Q9Q7Q8Q9Q7Q8Q9';
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+// DOM elements
+const avatarUpload = document.getElementById('avatarUpload');
+const displayName = document.getElementById('displayName');
+const saveProfileBtn = document.getElementById('saveProfileBtn');
+const logoutBtn = document.getElementById('logout-btn');
+const userAvatar = document.getElementById('userAvatar');
+const userName = document.getElementById('userName');
+
+// Check authentication and load profile
+async function checkAuth() {
+    const { data: { session }, error } = await supabase.auth.getSession();
+    
+    if (error) {
+        console.error('Auth error:', error);
+        return;
+    }
+    
+    if (!session) {
+        window.location.href = 'https://diamondrolls.github.io/play/';
+        return;
+    }
+    
+    await loadProfile();
+}
+
+// Load user profile
+async function loadProfile() {
+    try {
+        const { data: { user }, error } = await supabase.auth.getUser();
+        
+        if (error) throw error;
+        if (!user) throw new Error('No user found');
+
+        // Set display name
+        const name = user.user_metadata?.name || user.email || 'User';
+        userName.textContent = name;
+        displayName.value = name;
+
+        // Load avatar
+        await loadAvatar(user.id);
+        
+    } catch (error) {
+        console.error('Error loading profile:', error);
+    }
+}
+
+// Load user avatar
+async function loadAvatar(userId) {
+    try {
+        const { data, error } = await supabase.storage
+            .from('avatars')
+            .createSignedUrl(`${userId}/avatar`, 60); // 60 seconds expiry
+
+        if (error) throw error;
+        
+        if (data && data.signedUrl) {
+            userAvatar.src = data.signedUrl;
+        }
+    } catch (error) {
+        console.log('Using default avatar');
+        userAvatar.src = 'https://via.placeholder.com/100';
+    }
+}
+
+// Save profile (name and avatar)
+async function saveProfile() {
+    try {
+        const { data: { user }, error: userError } = await supabase.auth.getUser();
+        if (userError) throw userError;
+
+        // Update display name
+        if (displayName.value.trim()) {
+            const { error: updateError } = await supabase.auth.updateUser({
+                data: { name: displayName.value.trim() }
+            });
+            
+            if (updateError) throw updateError;
+            userName.textContent = displayName.value.trim();
+        }
+
+        // Upload avatar if selected
+        if (avatarUpload.files[0]) {
+            await uploadAvatar(user.id, avatarUpload.files[0]);
+        }
+
+        alert('Profile updated successfully!');
+        
+    } catch (error) {
+        console.error('Error saving profile:', error);
+        alert('Error updating profile: ' + error.message);
+    }
+}
+
+// Upload avatar to storage
+async function uploadAvatar(userId, file) {
+    try {
+        const { error: uploadError } = await supabase.storage
+            .from('avatars')
+            .upload(`${userId}/avatar`, file, { upsert: true });
+
+        if (uploadError) throw uploadError;
+
+        // Refresh avatar display
+        await loadAvatar(userId);
+        
+    } catch (error) {
+        console.error('Error uploading avatar:', error);
+        throw error;
+    }
+}
+
+// Logout function
+async function logout() {
+    try {
+        const { error } = await supabase.auth.signOut();
+        if (error) throw error;
+        window.location.href = 'https://diamondrolls.github.io/play/';
+    } catch (error) {
+        console.error('Error logging out:', error);
+        alert('Error logging out: ' + error.message);
+    }
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', checkAuth);
+saveProfileBtn.addEventListener('click', saveProfile);
+logoutBtn.addEventListener('click', logout);
+
+// Optional: Auto-save when avatar is selected
+avatarUpload.addEventListener('change', function() {
+    if (this.files[0]) {
+        saveProfile();
+    }
+});
+</script>
+
+</body>
+  </html>
