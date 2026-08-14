@@ -203,6 +203,3 @@ document.getElementById('saveProfileBtn').addEventListener('click', async () => 
     setLoadingState(false);
   }
 });
-
-// Load profile on page load
-loadProfile();
