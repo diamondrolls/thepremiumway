@@ -22,22 +22,41 @@ function setLoadingState(isLoading, buttonId = 'saveProfileBtn') {
   }
 }
 
-// Handle logout button
-document.getElementById('logout-btn').addEventListener('click', async () => {
-  const { error } = await client.auth.signOut();
-  if (error) {
-    alert(error.message);
-  } else {
-    window.location.href = 'https://diamondrolls.github.io/play/';
+// after creating `client` and defining loadProfile(), etc.
+document.addEventListener('DOMContentLoaded', () => {
+  // attach logout handler
+  const logoutBtn = document.getElementById('logout-btn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', async () => {
+      const { error } = await client.auth.signOut();
+      if (error) {
+        alert(error.message);
+      } else {
+        window.location.href = 'https://diamondrolls.github.io/play/';
+      }
+    });
   }
+
+  // redirect to login if not logged in
+  client.auth.getSession().then(({ data }) => {
+    if (!data.session) {
+      window.location.href = 'https://diamondrolls.github.io/play/';
+    }
+  });
+
+  // attach other DOM listeners (saveProfileBtn etc.) here, or ensure they exist before attaching
+  const saveBtn = document.getElementById('saveProfileBtn');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', async () => {
+      // existing saveProfile logic...
+    });
+  }
+
+  // finally load profile display
+  loadProfile();
 });
 
-// Redirect to login page if not logged in
-client.auth.getSession().then(({ data }) => {
-  if (!data.session) {
-    window.location.href = 'https://diamondrolls.github.io/play/';
-  }
-});
+
 
 // Load profile info (avatar + name)
 async function loadProfile() {
