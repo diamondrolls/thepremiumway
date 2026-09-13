@@ -170,9 +170,13 @@ document.getElementById('saveProfileBtn').addEventListener('click', async () => 
   } finally {
     setLoadingState(false);
   }
-  // finally load profile display
+  // Save profile with new avatar and display name
+document.getElementById('saveProfileBtn').addEventListener('click', async () => {
+  // ... all the save profile code ...
   loadProfile();
-  // Add logout functionality
+});
+
+// Add logout functionality (OUTSIDE the saveProfileBtn handler)
 document.getElementById('logoutBtn').addEventListener('click', async () => {
   try {
     const { error } = await client.auth.signOut();
@@ -188,4 +192,3 @@ document.getElementById('logoutBtn').addEventListener('click', async () => {
     alert("Error: " + error.message);
   }
 });
-
