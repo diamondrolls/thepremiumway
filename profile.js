@@ -170,7 +170,22 @@ document.getElementById('saveProfileBtn').addEventListener('click', async () => 
   } finally {
     setLoadingState(false);
   }
-});
   // finally load profile display
   loadProfile();
+  // Add logout functionality
+document.getElementById('logoutBtn').addEventListener('click', async () => {
+  try {
+    const { error } = await client.auth.signOut();
+    
+    if (error) {
+      alert("Error logging out: " + error.message);
+      return;
+    }
+    
+    // Redirect to login page or home page
+    window.location.href = '/'; // Change this to your login page URL if needed
+  } catch (error) {
+    alert("Error: " + error.message);
+  }
 });
+
