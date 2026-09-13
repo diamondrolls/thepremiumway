@@ -22,10 +22,6 @@ function setLoadingState(isLoading, buttonId = 'saveProfileBtn') {
   }
 }
 
-
-
-
-
 // Load profile info (avatar + name)
 async function loadProfile() {
   const { data: userData, error } = await client.auth.getUser();
@@ -167,13 +163,6 @@ document.getElementById('saveProfileBtn').addEventListener('click', async () => 
 
   } catch (error) {
     alert("Error: " + error.message);
-  } finally {
-    setLoadingState(false);
-  }
-  // Save profile with new avatar and display name
-document.getElementById('saveProfileBtn').addEventListener('click', async () => {
-  // ... all your save profile code from lines 83-171 ...
-  
   } finally {
     setLoadingState(false);
   }
