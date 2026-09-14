@@ -235,7 +235,26 @@ document.getElementById('saveProfileBtn').addEventListener('click', async () => 
       const { data: urlData } = client.storage.from('avatars').getPublicUrl(filePath);
       avatarUrl = urlData.publicUrl;
     }
+// Insert metadata row so this photo appears in the Photos panel
+try {
+  const { data: insertData, error: insertError } = await client
+    .from('profile_photos')
+    .insert([{
+      user_id: user.id,
+      file_path: filePath,
+      file_name: avatarFile.name,
+      mime_type: avatarFile.type,
+      size: avatarFile.size
+    }]);
 
+  if (insertError) {
+    console.warn('Failed to insert profile_photos row:', insertError);
+  } else {
+    console.log('Inserted profile_photos row:', insertData);
+  }
+} catch (err) {
+  console.warn('Unexpected error inserting into profile_photos:', err);
+}
     // Update user metadata with display name and avatar
     const updateData = {
       data: {
