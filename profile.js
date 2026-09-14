@@ -1,6 +1,6 @@
 // Supabase Configuration
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://fjtzodjudyctqacunlqp.supabase.co';
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4';
 
 if (!supabaseKey) {
   console.error('Supabase key is missing. Please set VITE_SUPABASE_ANON_KEY environment variable.');
