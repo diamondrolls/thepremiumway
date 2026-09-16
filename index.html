@@ -453,7 +453,7 @@ border-style:outset;
 	
 border-style:outset;
 	position:relative;
-        background-image:url('https://raw.githubusercontent.com/diamondrolls/images/refs/heads/main/Screenshot_20251112-115300%7E2.png');
+         background-image:url('https://raw.githubusercontent.com/diamondrolls/images/refs/heads/main/Screenshot_20251112-115300%7E2.png');
 	height:310px;
 	width:310px;
 	background-size:310px 310px;
@@ -465,7 +465,7 @@ border-style:outset;
 .triceybabee{
 border-style:outset;
 	position:relative;
-        background-image:url('https://raw.githubusercontent.com/diamondrolls/images/main/ED67441D-4D98-4A0A-8012-155061611290.png');
+         background-image:url('https://raw.githubusercontent.com/diamondrolls/images/main/ED67441D-4D98-4A0A-8012-155061611290.png');
 	height:310px;
 	width:310px;
 	background-size:310px 310px;
@@ -478,7 +478,7 @@ border-style:outset;
 border-style:outset;
 		position:relative;
 
-        background-image:url('https://i.pinimg.com/564x/53/44/eb/5344ebfa72b9312ad619bb32a06a17eb.jpg');
+         background-image:url('https://i.pinimg.com/564x/53/44/eb/5344ebfa72b9312ad619bb32a06a17eb.jpg');
 	height:310px;
 	width:310px;
 	background-size:310px 310px;
@@ -488,7 +488,7 @@ border-style:outset;
 .wiilovegaming{
 	border-style:outset;
 	position:relative;
-        background-image:url('https://raw.githubusercontent.com/diamondrolls/images/refs/heads/main/Screenshot_20260605_195905_Instagram.jpg');
+         background-image:url('https://raw.githubusercontent.com/diamondrolls/images/refs/heads/main/Screenshot_20260605_195905_Instagram.jpg');
 	height:310px;
 	width:310px;
 	background-size:310px 310px;
@@ -499,7 +499,7 @@ border-style:outset;
 	
 border-style:outset;
 	position:relative;
-        background-image:url('https://i.pinimg.com/564x/2e/07/ad/2e07adb5702403bf73f1d66360a0646b.jpg');
+         background-image:url('https://i.pinimg.com/564x/2e/07/ad/2e07adb5702403bf73f1d66360a0646b.jpg');
 	height:310px;
 	width:310px;
 	background-size:310px 310px;
@@ -527,22 +527,168 @@ border-style:outset;
 border-radius:40px;
 background-color:rgba(0,0,0,.5);
 	height:200px;
-overflow:hidden;
+overflow:visible;
          z-index:99;
-
 }
 
-			.photo1options{
-					   
-	position:relative;
-border-style:outset;
-	width:300px;
-border-radius:40px;
-background-color:rgb(0,255,255);
-	height:150px;
-overflow:hidden;
-         z-index:99;
-float:right;
+/* Profile Avatar Styles */
+#userAvatar {
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid #00FFFF;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 10px auto;
+}
+
+#userAvatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00FFFF;
+}
+
+/* Profile Dropdown Menu */
+#profileDropdown {
+  position: absolute;
+  top: 120px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.95);
+  border: 2px solid #00FFFF;
+  border-radius: 15px;
+  width: 280px;
+  padding: 15px;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.3);
+  animation: slideDown 0.3s ease-out;
+}
+
+#profileDropdown.active {
+  display: block;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#profileForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#userName {
+  color: #00FFFF;
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  text-shadow: 0 0 10px #00FFFF;
+}
+
+#displayName {
+  padding: 8px;
+  border: 1px solid #00FFFF;
+  border-radius: 8px;
+  background-color: rgba(0, 255, 255, 0.1);
+  color: #00FFFF;
+  font-size: 14px;
+}
+
+#displayName::placeholder {
+  color: rgba(0, 255, 255, 0.5);
+}
+
+#avatarUpload {
+  padding: 8px;
+  border: 1px solid #00FFFF;
+  border-radius: 8px;
+  background-color: rgba(0, 255, 255, 0.1);
+  color: #00FFFF;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#avatarUpload::file-selector-button {
+  background-color: #00FFFF;
+  color: #000000;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+#avatarUpload::file-selector-button:hover {
+  background-color: #00DDDD;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+#saveProfileBtn {
+  background-color: #10B981;
+  color: white;
+  margin-top: 8px;
+}
+
+#saveProfileBtn:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+#logout-btn {
+  background-color: #EF4444;
+  color: white;
+}
+
+#logout-btn:hover {
+  background-color: #DC2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+#photosBtn {
+  background-color: #3B82F6;
+  color: white;
+}
+
+#photosBtn:hover {
+  background-color: #2563EB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.photo1options {
+  position: relative;
+  border-style: outset;
+  width: 300px;
+  border-radius: 40px;
+  background-color: rgb(0, 255, 255);
+  height: 150px;
+  overflow: hidden;
+  z-index: 99;
+  float: right;
+}
+
+.hidden {
+  display: none !important;
+}
+
 			}
 			       .socialmediafacebook{
 	position:absolute;
@@ -645,16 +791,16 @@ overflow:hidden;
 		 background-image:url("https://raw.githubusercontent.com/diamondrolls/images/main/3670358.png");
 }	
 			       
-                  #left-sidebar{
-  float:left;
-  width:40%;
+                   #left-sidebar{
+   float:left;
+   width:40%;
 	padding-top:5px;
 	height:600px;
 	overflow:scroll;
 }
 #right-sidebar{
-  float:right;
-  width:40%;
+   float:right;
+   width:40%;
 	height:600px;
 	overflow:scroll;
 	
@@ -667,7 +813,7 @@ overflow:hidden;
 	border-style:outset;
 	width:100%;
 	height:620px;
-        background-size:100% 620px;
+         background-size:100% 620px;
 		 background-image:url("https://raw.githubusercontent.com/diamondrolls/images/main/IMG_3383.MOV");
 	overflow:scroll;
 	 }
@@ -686,7 +832,7 @@ overflow:hidden;
 	 border-style:outset;
 	width:100%;
 	height:720px;
-        position:relative;
+         position:relative;
 	 background-size:100% 720px;
 	overflow:hidden;
 	background-image:url("https://raw.githubusercontent.com/diamondrolls/images/refs/heads/main/Screenshot_20251020-114623%7E2.png");
@@ -713,11 +859,11 @@ overflow:hidden;
 		  	       
 .love{
 	  border-style:outset;
-  height:120px;
-  width:100%;
-  overflow:hidden;
+   height:120px;
+   width:100%;
+   overflow:hidden;
  background-color:rgb(0,0,0);
-  position:relative;
+   position:relative;
 border-radius:40px;
 border-color:rgb(0,250,200);
 }
@@ -815,7 +961,7 @@ border-color:rgb(0,250,200);
           background-color:rgba(255, 100, 100, .6);
 		 width:100%;
 		height:229px;
-             border-color:rgb(197,179,88);
+              border-color:rgb(197,179,88);
 		 border-style:inset;
 		border-radius:40px;
 		position:relative;
@@ -844,28 +990,23 @@ border-color:rgb(0,250,200);
 	content= "width=device-width,
 	initial-scale=1.0">
 	
-  <div class="photo1">
+   <div class="photo1">
 	<div id="profileForm">	
-                 <img id="userAvatar" src="default-avatar.png" alt="Avatar" width="100" />
+                 <img id="userAvatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2300FFFF'/%3E%3Ctext x='50' y='50' font-size='60' fill='%23000000' text-anchor='middle' dy='.3em'%3E👤%3C/text%3E%3C/svg%3E" alt="Avatar" width="100" />
 				  <h3 id="userName">User</h3>
+	</div>
+	<div id="profileDropdown">
+		<div id="profileForm">	
+                 <img id="userAvatarDropdown" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2300FFFF'/%3E%3Ctext x='50' y='50' font-size='60' fill='%23000000' text-anchor='middle' dy='.3em'%3E👤%3C/text%3E%3C/svg%3E" alt="Avatar" width="80" />
+			  <h3 id="userNameDropdown">User</h3>
 		               <input type="file" id="avatarUpload" accept="image/*" />
                        <input type="text" id="displayName" placeholder="Enter profile name" />
                        <button id="saveProfileBtn">Save Profile</button>
 			           <button id="logout-btn">Logout</button> 
-<button id="photosBtn">Photos</button>
-
-<div id="photosPanel" class="hidden">
-  <div class="photos-header">
-    <input id="userSearch" placeholder="Search users by name" />
-    <button id="searchBtn">Search</button>
-    <button id="closePhotosBtn">Close</button>
-  </div>
-
-  <div id="searchResults"></div>
-  <div id="photosGrid"></div>
-</div>
-		</div>		   			 
+			           <button id="photosBtn">Photos</button>
+		</div>
 	</div>
+   </div>
     
         <a href="https://diamondrolls.github.io/bitcoin/">
 					<div class="photo1options">	<h3 class="neon" data-text=" Chatt 🧾"> Chatt 🧾</h3></div></a> 
@@ -919,18 +1060,18 @@ border-color:rgb(0,250,200);
 			    <a href="https://diamondrolls.github.io/cashville/">  <div class="cashville">  <h7 class="neon" data-text="Cashville Licia">Cashville Licia</h7>
 		</div>  </a>
 <br><br>
-            <a href="https://diamondrolls.github.io/precious/" >  <div class="precious">  <h7 class="neon" data-text="Precious The Siren">Precious The Siren</h7>
+             <a href="https://diamondrolls.github.io/precious/" >  <div class="precious">  <h7 class="neon" data-text="Precious The Siren">Precious The Siren</h7>
 		</div>  </a>
  <br><br>
  <a href="https://diamondrolls.github.io/dede/" >  <div class="dede">  <h7 class="neon" data-text="Dede">Dede</h7>
 		</div>  </a>
 
  <br><br>
-            <a href="https://diamondrolls.github.io/honeythebaddie/">  <div class="honeythebaddie">  <h7 class="neon" data-text="Honey Tha Baddie">Honey Tha Baddie</h7>
+             <a href="https://diamondrolls.github.io/honeythebaddie/">  <div class="honeythebaddie">  <h7 class="neon" data-text="Honey Tha Baddie">Honey Tha Baddie</h7>
 		</div>  </a>
 <br><br>
 
-            <a href="https://diamondrolls.github.io/jasmineanu/" >  <div class="jasmineanu">  <h7 class="neon" data-text="Jasmineanu">Jasmineanu</h7>
+             <a href="https://diamondrolls.github.io/jasmineanu/" >  <div class="jasmineanu">  <h7 class="neon" data-text="Jasmineanu">Jasmineanu</h7>
 		</div>  </a>
 
  
@@ -943,7 +1084,7 @@ border-color:rgb(0,250,200);
 	   
  <div id="left-sidebar">
  
-          <a href="https://diamondrolls.github.io/ABKGates/" > <div class="abkgates"> <h7 class="neon" data-text="ABK Gates">ABK Gates</h7>
+           <a href="https://diamondrolls.github.io/ABKGates/" > <div class="abkgates"> <h7 class="neon" data-text="ABK Gates">ABK Gates</h7>
 		</div></a>      
 	  <br><br>
  
@@ -998,63 +1139,39 @@ border-color:rgb(0,250,200);
 <br>
 	<div class="love"><div class="containers1"><div class="fallingstar6"></div></div> 
 
-	 </div>
+ </div>
 
-<br>
-	<br>
-	
-  		<a href="https://diamondrolls.github.io/frontpage/">
-		<div class="withlove"> 
-<br><br><br><br><br><br><br><br><br>
-<center>	
+<script>
+  // Profile dropdown toggle
+  const userAvatar = document.getElementById('userAvatar');
+  const profileDropdown = document.getElementById('profileDropdown');
+  
+  userAvatar.addEventListener('click', function(e) {
+    e.stopPropagation();
+    profileDropdown.classList.toggle('active');
+  });
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!profileDropdown.contains(e.target) && e.target !== userAvatar) {
+      profileDropdown.classList.remove('active');
+    }
+  });
+  
+  // Prevent dropdown from closing when clicking inside it
+  profileDropdown.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
 
-	<div class="photo1">
-		<br><br><br><br><br><br><br><br>
-	      <h7 class="neon" data-text=" Shop  "> Shop </h7>
-	</div>
-		
-		<br>
-</center>
-		</div>
-		</a>
-<br>
-	<br>
-		
-	<div class="loves">
- <div id="left-sidebar">
-	 <div class ="participate"><p1>Be Yourself</p1> <h3>We give the community premium music and move the culture to new heights.</h3></div>
- 
-	<br>
-	<br>
-	
-	<div class ="participate"><p1>Investor Relations</p1>
-		<a href="https://diamondrolls.github.io/whitepaper/">
- 	 <button>Click here for Official White Paper </button>
-	 </a> </div>
-   </div>
-    <div id="right-sidebar">
-	    <div class ="participate"><p1>Get Featured</p1> <h3>if you would like to get featured please contact our instagram @ 93crypto   </h3></div>
- 
-	<br>
-	<br>
-	
-	<div class ="participate"><p1>Business Contact Information</p1><h3>diamondrolls@yahoo.com
-	  for any concern.</h3></div>
-	</div>
-    </div>
-
-			
-
-
-
-
-<script src='profile.js'></script>	
-
-
-		
+  // Example: Update profile name display
+  const displayName = document.getElementById('displayName');
+  const userName = document.getElementById('userName');
+  const userNameDropdown = document.getElementById('userNameDropdown');
+  
+  displayName.addEventListener('input', function() {
+    userName.textContent = this.value || 'User';
+    userNameDropdown.textContent = this.value || 'User';
+  });
+</script>
 </body>
-
-<footer>
-		
-</footer>
 </html>
